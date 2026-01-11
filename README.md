@@ -4,6 +4,8 @@ This project is a Google Sheets–based DMC floss inventory and color-matching t
 
 If you don’t have the exact floss a pattern calls for, the tool finds the closest matching DMC color you already own using RGB values and Euclidean distance.
 
+<img width="2040" height="1124" alt="example" src="https://github.com/user-attachments/assets/b0ecf288-510b-4038-99df-0602bc88ace8" />
+
 
 ## Features
 
