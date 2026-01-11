@@ -12,35 +12,28 @@ If you don’t have the exact floss a pattern calls for, the tool finds the clos
 - Find the closest DMC color match for substitutions or planning
 - Generates a copy-pastable list of unowned floss colors for convenient ordering via 123Stitch.com.
 
-## Closest Color Calculation
-
-Closest color matching is calculated using the Euclidean distance formula in RGB space:
-```
-d = √[(R₂ − R₁)² + (G₂ − G₁)² + (B₂ − B₁)²]
-```
-
-
-
-The owned DMC color with the smallest distance from the target RGB value is selected as the closest match.
-
 ---
 
 ## How to Use
 
-### 1. Copy the Template
+### 1. Make a copy of the Google Sheet
+File -> Make a copy
+https://docs.google.com/spreadsheets/d/1XTAc7M69CB0zcmJLx-77cY30G178C4qkiQFMqOsdkxI/edit?usp=sharing
+
+### 2. Copy the Template
 - Make a copy of the **Blank Pattern** sheet into your own Google Sheets file
 
-### 2. Enter Floss Numbers
+### 3. Enter Floss Numbers
 - Type or paste DMC floss numbers into the **Floss #** column
 - The **Owned** and **Name** columns will auto-populate via lookup formulas
 
-### 3. Color the Pattern Sheet
+### 4. Color the Pattern Sheet
 - Go to **Extensions → Apps Script**
 - Run the script:
   - `color pattern sheets.gs`
 - This colors the background of the floss name cells based on RGB values
 
-### 4. (Optional) Find Closest Colors
+### 5. (Optional) Find Closest Colors
 - In **Apps Script**, run:
   - `closest color euclidean.gs`
 - This calculates the nearest DMC color using RGB Euclidean distance
@@ -52,6 +45,16 @@ The owned DMC color with the smallest distance from the target RGB value is sele
 - **color bg from hex.gs** – Applies RGB-based background colors to inventory
 - **color pattern sheets.gs** – Applies RGB-based background colors to individual pattern sheet
 - **closest color euclidean.gs** – Computes closest DMC color match
+
+---
+## Closest Color Calculation
+
+Closest color matching is calculated using the Euclidean distance formula in RGB space:
+```
+d = √[(R₂ − R₁)² + (G₂ − G₁)² + (B₂ − B₁)²]
+```
+
+The owned DMC color with the smallest distance from the target RGB value is selected as the closest match.
 
 ---
 
